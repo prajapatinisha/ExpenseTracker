@@ -1,0 +1,35 @@
+﻿@model Project1.Models.ExpenseLimit
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ExpenseLimit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.expense.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.expense.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotExpLimit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotExpLimit)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ExpLimitId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
